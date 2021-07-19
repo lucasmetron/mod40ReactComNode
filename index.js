@@ -31,7 +31,6 @@ if (process.env.NODE_ENV !== 'development') { //este if torna os arquivos funcio
     })
 }
 
-
 app.listen(3000, () => {
     console.log("Running")
 })
