@@ -7,14 +7,14 @@ function App() {
 
   useEffect(() => {
 
-    fetch('/api/videos').then(res => res.json()).then(data => {
+    fetch('api/videos').then(res => res.json()).then(data => {
       setVideos(data)
 
     })
-    console.log(videos)
+
   }, [])
 
-
+  console.log(videos)
   return (
     <div className="App">
       <header className="App-header">
@@ -22,7 +22,7 @@ function App() {
           return (
 
             <a key={index} href={`https://www.youtube.com/watch?v=${id}`}>
-              <img src={`https://img.youtube.com/vi/${id}/0.jpg`} />
+              <img src={`https://img.youtube.com/vi/${id}/0.jpg`} alt={id} />
             </a>
           );
         })}
